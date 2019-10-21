@@ -1,4 +1,13 @@
 def join_ingredients(src)
+  counter = 0
+  foodsarray = []
+  while counter < src.length do 
+    foods = src[counter].join(" and ")
+    message = "I love #{foods} on my pizza"
+    foodsarray.push(message)
+    counter += 1
+  end
+  foodsarray
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
   # Build a new Array that contains strings where each pair of foods is
@@ -9,6 +18,17 @@ def join_ingredients(src)
 end
 
 def find_greater_pair(src)
+  counter = 0 
+  big_num_array = []
+  while counter < src.length do 
+    if src[counter][0] > src[counter][1] do
+      big_num_array.push(src[counter][0])
+    else 
+      big_num_array.push(src[counter][1])
+    end
+    counter += 1
+  end
+  big_num_array
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
