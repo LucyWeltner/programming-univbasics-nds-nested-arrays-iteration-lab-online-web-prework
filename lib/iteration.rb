@@ -21,7 +21,7 @@ def find_greater_pair(src)
   counter = 0 
   big_num_array = []
   while counter < src.length do 
-    if src[counter][0] > src[counter][1] do
+    if src[counter][0] > src[counter][1] then
       big_num_array.push(src[counter][0])
     else 
       big_num_array.push(src[counter][1])
